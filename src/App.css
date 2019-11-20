@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+.nav {
+  background-color: #000000;
+  height: 60px;
+  width: 101%;
+  position: fixed;
+  box-shadow: -5px 20px 25px black;
+  z-index: 1;
+}
+.nav img {
+  width: 130px;
+  margin-left: 30px;
+}
+.nav img::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.nav a {
+  color: white;
+  font-family: "Arial";
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px 20px;
+}
+.nav a::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.nav a:hover {
+  color: #c59d5f;
+}
+
+.nav-line {
+  box-shadow: none;
+}
+
+.home {
+  background: linear-gradient(black, rgba(109, 109, 109, 0.5)), url("imgs/background_home.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 800px;
+  text-align: center;
+  padding-top: 300px;
+}
+.home h1 {
+  color: white;
+  font-family: "Oswald";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 80px;
+}
+.home h1::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.home p {
+  font-family: "Brush Script MT";
+  color: #c59d5f;
+  font-size: 30px;
+}
+.home p::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+
+.footer {
+  background-color: #000000;
+  color: white;
+  line-height: 30px;
+  width: 101%;
+}
+.footer p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.footer p::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.footer a {
+  color: white;
+  font-family: "Arial";
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer a::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.footer .icon {
+  background: url("imgs/css_sprites.png") no-repeat;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+  vertical-align: bottom;
+}
+.footer .info p {
+  margin-left: 10px;
+}
+.footer .info p::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.footer .info-block {
+  margin: 50px 100px;
+}
+.footer .info-block::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.footer .info .icon-location {
+  background-position: -20px -24px;
+}
+.footer .info .icon-tel {
+  background-position: -20px -70px;
+}
+.footer .info .icon-email {
+  background-position: -20px -115px;
+}
+.footer .hours {
+  margin: 50px 100px;
+}
+.footer .hours::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.footer .follow {
+  margin: 50px 100px;
+}
+.footer .follow p {
+  margin-left: 5px;
+}
+.footer .follow .icon-ig {
+  background-position: -87px -19px;
+}
+.footer .follow .icon-fb {
+  background-position: -87px -65px;
+}
+.footer .follow .icon-tw {
+  background-position: -87px -115px;
+}
+
+.services {
+  background: linear-gradient(black, rgba(109, 109, 109, 0.5)), url("imgs/background_services.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 800px;
+  text-align: center;
+  padding-top: 80px;
+  overflow: hidden;
+}
+.services h1 {
+  font-size: 50px;
+  color: white;
+  font-family: "Oswald";
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.services h1::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.services p {
+  font-family: "Brush Script MT";
+  color: #c59d5f;
+  font-size: 30px;
+}
+.services p::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.services ul {
+  color: white;
+  font-size: 20px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 400px;
+  margin-top: 10px;
+}
+.services ul li {
+  padding-bottom: 30px;
+  margin-left: 95px;
+}
+.services ul li::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.services ul li b::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.services ul li span {
+  color: #c59d5f;
+}
+.services ul li span::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.services ul li div {
+  font-family: Arial;
+  font-size: 15px;
+  text-align: left;
+}
+.services ul li div::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.services button {
+  color: white;
+  font-family: "Oswald";
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #c59d5f;
+  width: 150px;
+  border-radius: 0;
+}
+.services button::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.services button:hover {
+  color: black;
+}
+.services button:active {
+  box-shadow: 0 0 10px black;
+}
+.services button:focus {
+  box-shadow: 0 0 10px black;
+}
+
+.profile {
+  height: 850px;
+  background-color: #f6f6f6;
+  padding-top: 150px;
+  overflow: hidden;
+}
+.profile h1 {
+  font-family: "Oswald";
+  color: #c59d5f;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin: 0 0 60px 100px;
+}
+.profile h1::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.profile .login {
+  height: 600px;
+  background-color: white;
+  padding: 100px;
+}
+.profile .login h2 {
+  font-family: "Oswald";
+  color: black;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.profile .login h2::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.profile .login label {
+  font-family: Arial;
+  color: #828282;
+  margin-top: 30px;
+}
+.profile .login label::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.profile .login #email, .profile .login #psw {
+  border: none;
+  height: 45px;
+  width: 100%;
+  background-color: #f6f6f6;
+}
+.profile .login button {
+  color: white;
+  font-family: "Oswald";
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #c59d5f;
+  width: 150px;
+  border-radius: 0;
+  margin: 50px 50px 20px 0;
+}
+.profile .login button::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.profile .login button:hover {
+  color: black;
+}
+.profile .login button:active {
+  box-shadow: 0 0 10px black;
+}
+.profile .login button:focus {
+  box-shadow: 0 0 10px black;
+}
+.profile .login #signUp {
+  position: absolute;
+  right: 50px;
+}
+.profile .login div .check {
+  display: inline-block;
+  position: absolute;
+  top: 685px;
+}
+.profile .login a {
+  color: #c59d5f;
+  text-decoration: none;
+}
+.profile .login a::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+
+/*# sourceMappingURL=App.css.map */

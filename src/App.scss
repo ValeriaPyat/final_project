@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+
+$color-beige: #c59d5f;
+$color-grey: #828282;
+$color-light-grey: #f6f6f6;
+
+@mixin selection {
+  &::selection {
+    color: white;
+    background-color: $color-beige;
+  }
+}
+@mixin white-text-a {
+  color: white;
+  font-family: "Arial";
+  text-decoration: none;
+  font-weight: bold;
+  @include selection;
+}
+@mixin white-text-h {
+  color: white;
+  font-family: "Oswald";
+  font-weight: bold;
+  text-transform: uppercase;
+  @include selection;
+}
+@mixin beige-text-p {
+  font-family: "Brush Script MT";
+  color: $color-beige;
+  font-size: 30px;
+  @include selection;
+}
+@mixin forms {
+  border: none;
+  height: 45px;
+  width: 100%;
+  background-color: $color-light-grey;
+}
+@mixin button {
+  @include white-text-h;
+  background-color: $color-beige;
+  width: 150px;
+  border-radius: 0;
+
+  &:hover {
+    color: black;
+  }
+
+  &:active {
+    box-shadow: 0 0 10px black;
+  }
+
+  &:focus {
+    box-shadow: 0 0 10px black;
+  }
+}
+@mixin background_page ($address) {
+  background: linear-gradient(black, rgba(109, 109, 109, 0.5)), url($address);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 800px;
+  text-align: center;
+}
+
+.nav {
+  background-color: #000000;
+  height: 60px;
+  width: 101%;
+  position: fixed;
+  box-shadow: -5px 20px 25px black;
+  z-index: 1;
+
+  img {
+    width: 130px;
+    margin-left: 30px;
+    @include selection;
+  }
+
+  a {
+    @include white-text-a;
+    font-size: 20px;
+    margin: 20px 20px;
+
+    &:hover {
+      color: $color-beige;
+    }
+  }
+}
+
+.nav-line {
+  box-shadow: none;
+}
+
+.home {
+  @include background_page('imgs/background_home.jpg');
+  padding-top: 300px;
+
+  h1 {
+    @include white-text-h;
+    font-size: 80px;
+  }
+
+  p {
+    @include beige-text-p;
+  }
+}
+
+.footer {
+  background-color: #000000;
+  color: white;
+  line-height: 30px;
+  width: 101%;
+
+  p {
+    text-transform: uppercase;
+    font-weight: bold;
+    @include selection;
+  }
+
+  a {
+    @include white-text-a;
+  }
+
+  .icon {
+    background: url("imgs/css_sprites.png") no-repeat;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    vertical-align: bottom;
+  }
+
+  .info {
+
+    p {
+      margin-left: 10px;
+      @include selection;
+    }
+
+    &-block {
+      margin: 50px 100px;
+      @include selection;
+    }
+
+    .icon {
+      &-location {
+        background-position: -20px -24px;
+      }
+
+      &-tel {
+        background-position: -20px -70px;
+      }
+
+      &-email {
+        background-position: -20px -115px;
+      }
+    }
+  }
+
+  .hours {
+    margin: 50px 100px;
+    @include selection;
+  }
+
+  .follow {
+    margin: 50px 100px;
+
+    p {
+      margin-left: 5px;
+    }
+
+    .icon {
+      &-ig {
+        background-position: -87px -19px;
+      }
+
+      &-fb {
+        background-position: -87px -65px;
+      }
+
+      &-tw {
+        background-position: -87px -115px;
+      }
+    }
+  }
+
+}
+
+.services {
+  @include background_page('imgs/background_services.jpg');
+  padding-top: 80px;
+  overflow: hidden;
+
+  h1 {
+    font-size: 50px;
+    @include white-text-h;
+  }
+
+  p {
+    @include beige-text-p;
+  }
+
+  ul {
+    color: white;
+    font-size: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 400px;
+    margin-top: 10px;
+
+    li {
+      padding-bottom: 30px;
+      margin-left: 95px;
+      @include selection;
+
+      b{
+        @include selection;
+      }
+
+      span {
+        color: $color-beige;
+        @include selection;
+      }
+
+      div {
+        font-family: Arial;
+        font-size: 15px;
+        text-align: left;
+        @include selection;
+      }
+    }
+  }
+
+  button {
+    @include button;
+  }
+}
+
+.profile {
+  height: 850px;
+  background-color: $color-light-grey;
+  padding-top: 150px;
+  overflow: hidden;
+
+  h1 {
+    font-family: "Oswald";
+    color: $color-beige;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 0 0 60px 100px;
+    @include selection;
+  }
+
+  .login {
+    height: 600px;
+    background-color: white;
+    padding: 100px;
+
+    h2 {
+      font-family: "Oswald";
+      color: black;
+      font-size: 50px;
+      text-transform: uppercase;
+      @include selection;
+    }
+
+    label {
+      font-family: Arial;
+      color: $color-grey;
+      margin-top: 30px;
+      @include selection;
+    }
+
+    #email, #psw {
+      @include forms;
+    }
+
+    button {
+      @include button;
+      margin: 50px 50px 20px 0;
+    }
+
+    #signUp {
+      position: absolute;
+      right: 50px;
+    }
+
+    div .check {
+      display: inline-block;
+      position: absolute;
+      top: 685px;
+    }
+
+    a {
+      color: $color-beige;
+      text-decoration: none;
+      @include selection;
+    }
+
+  }
+
+
+}
