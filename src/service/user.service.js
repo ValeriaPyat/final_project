@@ -18,7 +18,7 @@ function register(user) {
 
   localStorage.setItem(username, JSON.stringify(user));
 
-  return new Promise.resolve(user);
+  return Promise.resolve(user);
 }
 
 function login(username, password) {

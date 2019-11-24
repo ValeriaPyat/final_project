@@ -1,20 +1,29 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {NavLink} from "react-router-dom";
+import {connect} from "react-redux";
 
-const Header = () => {
-    return (
-        <nav className={'nav' + ' ' + 'row'}>
-            <img src={require('../imgs/log.png')}/>
-            <NavLink to='/home' activeClassName={'active'}>Home</NavLink>
-            <NavLink to='/services' activeClassName={'active'}>Services</NavLink>
-            <NavLink to='/profile' activeClassName={'active'}>Profile</NavLink>
-            <div className={'sign'}>
-                <NavLink to='/login' activeClassName={'active'}>Sign In</NavLink>
-                <NavLink to='/registration' activeClassName={'active'}>Sign Up</NavLink>
-            </div>
-        </nav>
-    )
-};
+class Header extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-export default Header;
+    render() {
+        return (
+            <nav className={'nav' + ' ' + 'row'}>
+                <img src={require('../imgs/log.png')}/>
+                <NavLink to='/home' activeClassName={'active'}>Home</NavLink>
+                <NavLink to='/services' activeClassName={'active'}>Services</NavLink>
+                <NavLink to='/profile' activeClassName={'active'}>Profile</NavLink>
+            </nav>
+        )
+    }
+}
+
+function mapState(state) {
+    const { user } = state;
+    return { user };
+}
+
+const connectedHeader = connect(mapState)(Header);
+export { connectedHeader as Header };
