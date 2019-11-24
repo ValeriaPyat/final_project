@@ -35,6 +35,13 @@ $color-light-grey: #f6f6f6;
   height: 45px;
   width: 100%;
   background-color: $color-light-grey;
+  padding-left: 10px;
+}
+@mixin label {
+  font-family: Arial;
+  color: $color-grey;
+  margin-top: 20px;
+  @include selection;
 }
 @mixin button {
   @include white-text-h;
@@ -59,16 +66,15 @@ $color-light-grey: #f6f6f6;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  height: 800px;
+  height: 850px;
   text-align: center;
 }
 
 .nav {
   background-color: #000000;
-  height: 60px;
+  height: 80px;
   width: 101%;
   position: fixed;
-  box-shadow: -5px 20px 25px black;
   z-index: 1;
 
   img {
@@ -80,29 +86,70 @@ $color-light-grey: #f6f6f6;
   a {
     @include white-text-a;
     font-size: 20px;
-    margin: 20px 20px;
+    margin: 25px 20px;
 
     &:hover {
       color: $color-beige;
     }
   }
-}
 
-.nav-line {
-  box-shadow: none;
+  .sign {
+    margin: 25px 0 0 800px;
+  }
 }
 
 .home {
-  @include background_page('imgs/background_home.jpg');
-  padding-top: 300px;
+  .general {
+    @include background_page('imgs/background_home.jpg');
+    padding-top: 300px;
 
-  h1 {
-    @include white-text-h;
-    font-size: 80px;
+    h1 {
+      @include white-text-h;
+      font-size: 80px;
+    }
+
+    #quote {
+      @include beige-text-p;
+    }
+
+    .marquee {
+      overflow: hidden;
+      font-size: 0;
+      color: white;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      white-space: nowrap;
+      cursor: default;
+      user-select: none;
+      position: absolute;
+      top: 50px;
+
+      .marquee-text {
+        font-size: 24vmax;
+        margin-left: 200px;
+        color: white;
+        opacity: .15;
+        font-weight: 600;
+        white-space: nowrap;
+        display: inline-block;
+        width: auto;
+        font-family: Oswald;
+      }
+    }
   }
 
-  p {
+  .about {
+    height: 500px;
+    background-color: $color-light-grey;
+    padding: 90px;
     @include beige-text-p;
+    color: black;
+    text-align: center;
+    font-family: Oswald;
+
+    b {
+      color: $color-beige;
+    }
   }
 }
 
@@ -188,119 +235,241 @@ $color-light-grey: #f6f6f6;
 }
 
 .services {
-  @include background_page('imgs/background_services.jpg');
-  padding-top: 80px;
-  overflow: hidden;
+  &-general {
+    @include background_page('imgs/background_services.jpg');
+    padding-top: 80px;
+    overflow: hidden;
 
-  h1 {
-    font-size: 50px;
-    @include white-text-h;
-  }
-
-  p {
-    @include beige-text-p;
-  }
-
-  ul {
-    color: white;
-    font-size: 20px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 400px;
-    margin-top: 10px;
-
-    li {
-      padding-bottom: 30px;
-      margin-left: 95px;
-      @include selection;
-
-      b{
-        @include selection;
-      }
-
-      span {
-        color: $color-beige;
-        @include selection;
-      }
-
-      div {
-        font-family: Arial;
-        font-size: 15px;
-        text-align: left;
-        @include selection;
-      }
+    h1 {
+      font-size: 50px;
+      @include white-text-h;
     }
+
+    p {
+      @include beige-text-p;
+    }
+
+    ul {
+      color: white;
+      font-size: 20px;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 400px;
+      margin-top: 10px;
+
+      li {
+        padding-bottom: 30px;
+        margin-left: 95px;
+        @include selection;
+
+        b {
+          @include selection;
+        }
+
+        span {
+          color: $color-beige;
+          @include selection;
+        }
+
+        div {
+          font-family: Arial;
+          font-size: 15px;
+          text-align: left;
+          @include selection;
+        }
+      }
+  }
   }
 
   button {
     @include button;
   }
+
+  &-imgs {
+    height: 800px;
+    background-color: #313131;
+    padding: 60px;
+    text-align: center;
+
+    h2 {
+      @include white-text-h;
+      font-size: 50px;
+      margin-bottom: 50px;
+    }
+
+    img {
+      margin: 20px;
+      width: 250px;
+      height: 250px;
+      border: 5px solid white;
+
+      &:hover {
+        transform: scale(1.2);
+        transition: 1s;
+      }
+    }
+  }
 }
 
-.profile {
-  height: 850px;
-  background-color: $color-light-grey;
-  padding-top: 150px;
-  overflow: hidden;
+.login {
+  height: 600px;
+  background-color: white;
+  padding: 150px 100px;
 
-  h1 {
+  h2 {
     font-family: "Oswald";
-    color: $color-beige;
+    color: black;
     font-size: 50px;
     text-transform: uppercase;
-    margin: 0 0 60px 100px;
     @include selection;
   }
 
-  .login {
-    height: 600px;
+  label {
+    @include label;
+  }
+
+  #email, #psw {
+    @include forms;
+  }
+
+  button {
+    @include button;
+    margin: 50px 50px 20px 0;
+  }
+
+  #signUp {
+    position: absolute;
+    right: 50px;
+  }
+
+  div .check {
+    display: inline-block;
+    position: absolute;
+    top: 685px;
+  }
+
+  a {
+    color: $color-beige;
+    text-decoration: none;
+    @include selection;
+  }
+}
+
+.signUp {
+  height: 850px;
+  background-color: white;
+  padding:150px 100px;
+
+  h2 {
+    font-family: "Oswald";
+    color: black;
+    font-size: 50px;
+    text-transform: uppercase;
+    @include selection;
+  }
+
+  label {
+    @include label;
+  }
+
+  input {
+    @include forms;
+  }
+
+  button {
+    @include button;
+    margin: 50px 50px 20px 0;
+  }
+
+  #signIn {
+    position: absolute;
+    right: 50px;
+  }
+
+  a {
+    color: $color-beige;
+    text-decoration: none;
+    @include selection;
+  }
+
+}
+
+.profile {
+  height: 1000px;
+  background-color: $color-light-grey;
+  padding: 150px 0;
+  overflow: hidden;
+  @include selection;
+
+  label {
+    @include label;
+  }
+
+  h1 {
+    @include white-text-h;
+    color: black;
+    @include selection;
+    margin-left: 80px;
+  }
+
+  img {
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .name {
+    margin: 40px 80px;
+    font-family: Oswald;
+    color: $color-beige;
+    font-size: 20px;
+    @include selection;
+  }
+
+  .book {
     background-color: white;
-    padding: 100px;
+    height: 600px;
+    padding: 70px;
 
     h2 {
-      font-family: "Oswald";
+      @include white-text-h;
       color: black;
-      font-size: 50px;
-      text-transform: uppercase;
-      @include selection;
     }
 
-    label {
-      font-family: Arial;
-      color: $color-grey;
-      margin-top: 30px;
-      @include selection;
-    }
+    .serv {
+      margin: 30px 0 0 0;
 
-    #email, #psw {
-      @include forms;
+      select {
+        @include forms;
+        margin-bottom: 30px;
+        @include selection;
+      }
     }
+    .dateTime {
+      input {
+        @include forms;
+      }
 
-    button {
-      @include button;
-      margin: 50px 50px 20px 0;
+      .react-datepicker {
+        &__day{
+          &--selected {
+            background-color: $color-beige;
+          }
+
+          &:hover {
+            background-color: $color-beige;
+          }
+        }
+      }
     }
 
     #signUp {
-      position: absolute;
-      right: 50px;
+      margin-top: 70px;
+      @include button;
     }
-
-    div .check {
-      display: inline-block;
-      position: absolute;
-      top: 685px;
-    }
-
-    a {
-      color: $color-beige;
-      text-decoration: none;
-      @include selection;
-    }
-
   }
-
-
 }

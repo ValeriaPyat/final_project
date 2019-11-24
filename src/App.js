@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 import Services from "./components/Services";
 import Profile from "./components/Profile";
 import {BrowserRouter, Route} from "react-router-dom";
+import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
 
 function App() {
     return (
@@ -17,6 +19,8 @@ function App() {
                 <Route path='/home' render={Home}/>
                 <Route path='/services' render={Services}/>
                 <Route path='/profile' render={Profile}/>
+                <Route path='/signIn' render={SignIn}/>
+                <Route path='/signUp' render={SignUp}/>
                 <Footer/>
             </div>
         </BrowserRouter>

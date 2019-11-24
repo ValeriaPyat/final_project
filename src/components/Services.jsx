@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {NavLink} from "react-router-dom";
 
 const ServicesItem  = (props) => {
     return <li><b>{props.name}</b>{props.dots}<span>{props.price}</span><br/>
@@ -41,16 +42,31 @@ const Services = () => {
 
     return (
         <div className={'services'}>
-            <h1>This is our offer</h1>
-            <p>Our masters will always help you choose and make exactly the haircut that emphasizes your
-                personality. <br/>
-                Register and see for yourself!</p>
-            <div className={'row'}>
-                <ul className={'list1 col-md-4'}>
-                    { servicesElements }
-                </ul>
+            <div className="services-general">
+                <h1>This is our offer</h1>
+                <p>Our masters will always help you choose and make exactly the haircut that emphasizes your
+                    personality. <br/>
+                    Register and see for yourself!</p>
+                <div className={'row'}>
+                    <ul className={'list1 col-md-4'}>
+                        { servicesElements }
+                    </ul>
+                </div>
+                <NavLink to={'/profile'}>
+                    <button type="button" className="btn btn-lg">appointment</button>
+                </NavLink>
             </div>
-            <button type="button" className="btn btn-lg">Sign Up</button>
+            <div className="services-imgs">
+                <h2>our work</h2>
+                <img src={require('../imgs/cut1.jpg')} alt=""/>
+                <img src={require('../imgs/cut2.jpg')} alt=""/>
+                <img src={require('../imgs/cut3.jfif')} alt=""/>
+                <img src={require('../imgs/cut4.jfif')} alt=""/>
+                <img src={require('../imgs/cut5.jpg')} alt=""/>
+                <img src={require('../imgs/cut9.png')} alt=""/>
+                <img src={require('../imgs/cut7.jpg')} alt=""/>
+                <img src={require('../imgs/cut8.jpg')} alt=""/>
+            </div>
         </div>
     )
 };

@@ -1,31 +1,34 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {DateTime} from "./Date";
 
 const Profile = () => {
     return (
         <div className={'profile'}>
-                <h1>my account</h1>
-            <div className={'login'}>
-                <h2>login</h2>
-                <div className={'email'}>
-                    <label htmlFor="email">Username or email address *</label><br/>
-                    <input type="email" name="email" id="email"/>
+            <h1>my account</h1>
+            <div className={'name'}>
+                <img src={require('../imgs/cut.png')}/>
+                <p>First name : ....</p>
+                <p>Second name: ....</p>
+                <p>E-mail: ....</p>
+            </div>
+            <div className="book">
+                <h2>Appointment</h2>
+                <div className={'serv'}>
+                    <label htmlFor="service">Please select the service that interests you from the list:</label> <br/>
+                    <select className="service" id="serv">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
                 </div>
-                <div className={'psw'}>
-                    <label htmlFor="psw">Password *</label><br/>
-                    <input type="password" name="psw" id="psw"/>
+                <div className={'dateTime'}>
+                    <label htmlFor="date">Select date and time:</label> <br/>
+                    <DateTime id={"date"}/>
                 </div>
-                <div>
-                    <button type="button" className="btn btn-lg">sign in</button>
-                    <div className={'check'}>
-                        <input type="checkbox" name="check" id="check"/>
-                        <label htmlFor="check">Remember me</label>
-                    </div>
-                    <button type="button" className="btn btn-lg" id={'signUp'}>Sign Up</button>
-                    <div className={'lost'}>
-                        <a href={'#'}>Lost your password?</a>
-                    </div>
-                </div>
+                <button type="button" className="btn btn-lg" id={'signUp'}>Booking</button>
             </div>
         </div>
     )
