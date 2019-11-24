@@ -34,13 +34,14 @@ $color-light-grey: #f6f6f6;
   border: none;
   height: 45px;
   width: 100%;
+  border-radius: 0px;
   background-color: $color-light-grey;
   padding-left: 10px;
 }
 @mixin label {
   font-family: Arial;
   color: $color-grey;
-  margin-top: 20px;
+  margin-top: 10px;
   @include selection;
 }
 @mixin button {
@@ -94,7 +95,7 @@ $color-light-grey: #f6f6f6;
   }
 
   .sign {
-    margin: 25px 0 0 800px;
+    margin: 25px 0 0 50px;
   }
 }
 
@@ -313,8 +314,8 @@ $color-light-grey: #f6f6f6;
   }
 }
 
-.login {
-  height: 600px;
+.signIn {
+  height: 650px;
   background-color: white;
   padding: 150px 100px;
 
@@ -323,50 +324,7 @@ $color-light-grey: #f6f6f6;
     color: black;
     font-size: 50px;
     text-transform: uppercase;
-    @include selection;
-  }
-
-  label {
-    @include label;
-  }
-
-  #email, #psw {
-    @include forms;
-  }
-
-  button {
-    @include button;
-    margin: 50px 50px 20px 0;
-  }
-
-  #signUp {
-    position: absolute;
-    right: 50px;
-  }
-
-  div .check {
-    display: inline-block;
-    position: absolute;
-    top: 685px;
-  }
-
-  a {
-    color: $color-beige;
-    text-decoration: none;
-    @include selection;
-  }
-}
-
-.signUp {
-  height: 850px;
-  background-color: white;
-  padding:150px 100px;
-
-  h2 {
-    font-family: "Oswald";
-    color: black;
-    font-size: 50px;
-    text-transform: uppercase;
+    padding-bottom: 20px;
     @include selection;
   }
 
@@ -382,16 +340,34 @@ $color-light-grey: #f6f6f6;
     @include button;
     margin: 50px 50px 20px 0;
   }
+}
 
-  #signIn {
-    position: absolute;
-    right: 50px;
+
+.signUp {
+  height: 900px;
+  background-color: white;
+  padding:150px 100px;
+
+  h2 {
+    font-family: "Oswald";
+    color: black;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    @include selection;
   }
 
-  a {
-    color: $color-beige;
-    text-decoration: none;
-    @include selection;
+  label {
+    @include label;
+  }
+
+  input {
+    @include forms;
+  }
+
+  button {
+    @include button;
+    margin: 50px 50px 20px 0;
   }
 
 }

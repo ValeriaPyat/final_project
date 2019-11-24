@@ -30,7 +30,7 @@
   color: #c59d5f;
 }
 .nav .sign {
-  margin: 25px 0 0 800px;
+  margin: 25px 0 0 50px;
 }
 
 .home .general {
@@ -301,38 +301,40 @@
   transition: 1s;
 }
 
-.login {
-  height: 600px;
+.signIn {
+  height: 650px;
   background-color: white;
   padding: 150px 100px;
 }
-.login h2 {
+.signIn h2 {
   font-family: "Oswald";
   color: black;
   font-size: 50px;
   text-transform: uppercase;
+  padding-bottom: 20px;
 }
-.login h2::selection {
+.signIn h2::selection {
   color: white;
   background-color: #c59d5f;
 }
-.login label {
+.signIn label {
   font-family: Arial;
   color: #828282;
-  margin-top: 20px;
+  margin-top: 10px;
 }
-.login label::selection {
+.signIn label::selection {
   color: white;
   background-color: #c59d5f;
 }
-.login #email, .login #psw {
+.signIn input {
   border: none;
   height: 45px;
   width: 100%;
+  border-radius: 0px;
   background-color: #f6f6f6;
   padding-left: 10px;
 }
-.login button {
+.signIn button {
   color: white;
   font-family: "Oswald";
   font-weight: bold;
@@ -342,39 +344,22 @@
   border-radius: 0;
   margin: 50px 50px 20px 0;
 }
-.login button::selection {
+.signIn button::selection {
   color: white;
   background-color: #c59d5f;
 }
-.login button:hover {
+.signIn button:hover {
   color: black;
 }
-.login button:active {
+.signIn button:active {
   box-shadow: 0 0 10px black;
 }
-.login button:focus {
+.signIn button:focus {
   box-shadow: 0 0 10px black;
-}
-.login #signUp {
-  position: absolute;
-  right: 50px;
-}
-.login div .check {
-  display: inline-block;
-  position: absolute;
-  top: 685px;
-}
-.login a {
-  color: #c59d5f;
-  text-decoration: none;
-}
-.login a::selection {
-  color: white;
-  background-color: #c59d5f;
 }
 
 .signUp {
-  height: 850px;
+  height: 900px;
   background-color: white;
   padding: 150px 100px;
 }
@@ -383,6 +368,7 @@
   color: black;
   font-size: 50px;
   text-transform: uppercase;
+  padding-bottom: 20px;
 }
 .signUp h2::selection {
   color: white;
@@ -391,7 +377,7 @@
 .signUp label {
   font-family: Arial;
   color: #828282;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .signUp label::selection {
   color: white;
@@ -401,6 +387,7 @@
   border: none;
   height: 45px;
   width: 100%;
+  border-radius: 0px;
   background-color: #f6f6f6;
   padding-left: 10px;
 }
@@ -427,18 +414,6 @@
 .signUp button:focus {
   box-shadow: 0 0 10px black;
 }
-.signUp #signIn {
-  position: absolute;
-  right: 50px;
-}
-.signUp a {
-  color: #c59d5f;
-  text-decoration: none;
-}
-.signUp a::selection {
-  color: white;
-  background-color: #c59d5f;
-}
 
 .profile {
   height: 1000px;
@@ -453,7 +428,7 @@
 .profile label {
   font-family: Arial;
   color: #828282;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .profile label::selection {
   color: white;
@@ -515,6 +490,7 @@
   border: none;
   height: 45px;
   width: 100%;
+  border-radius: 0px;
   background-color: #f6f6f6;
   padding-left: 10px;
   margin-bottom: 30px;
@@ -527,6 +503,7 @@
   border: none;
   height: 45px;
   width: 100%;
+  border-radius: 0px;
   background-color: #f6f6f6;
   padding-left: 10px;
 }
