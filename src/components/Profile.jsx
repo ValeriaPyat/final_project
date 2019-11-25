@@ -6,6 +6,7 @@ import {NavLink, Redirect} from "react-router-dom";
 import {ServiceList} from "./ServiceList";
 
 class Profile extends React.Component {
+
     constructor(props) {
         super(props);
 

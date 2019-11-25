@@ -575,7 +575,7 @@
   width: 150px;
   border-radius: 0;
   position: absolute;
-  left: 530px;
+  left: 440px;
 }
 .book .buttons #logout::selection {
   color: white;
@@ -589,6 +589,48 @@
 }
 .book .buttons #logout:focus {
   box-shadow: 0 0 10px black;
+}
+.book .appointment button {
+  color: white;
+  font-family: "Oswald";
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #c59d5f;
+  width: 150px;
+  border-radius: 0;
+  padding: 2px 2px 2px 2px;
+  position: absolute;
+  left: 490px;
+  top: 35px;
+  width: 90px;
+  height: 40px;
+  font-size: 13px;
+  margin-top: 70px;
+}
+.book .appointment button::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.book .appointment button:hover {
+  color: black;
+}
+.book .appointment button:active {
+  box-shadow: 0 0 10px black;
+}
+.book .appointment button:focus {
+  box-shadow: 0 0 10px black;
+}
+.book .appointment .item {
+  padding: 10px;
+  margin-top: 50px;
+  heigth: 100px;
+  width: 575px;
+  background-color: #f6f6f6;
+  word-wrap: normal;
+  font-weight: bold;
+}
+.book .appointment .item b {
+  color: #c59d5f;
 }
 
 /*# sourceMappingURL=App.css.map */

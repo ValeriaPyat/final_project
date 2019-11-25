@@ -483,7 +483,35 @@ $color-light-gray: #f6f6f6;
     #logout {
       @include button;
       position:absolute;
-      left: 530px;
+      left: 440px;
+    }
+  }
+
+  .appointment {
+    button {
+      @include button;
+      padding: 2px 2px 2px 2px;
+      position: absolute;
+      left: 490px;
+      top: 35px;
+      width: 90px;
+      height: 40px;
+      font-size: 13px;
+      margin-top: 70px;
+    }
+
+    .item {
+      padding: 10px;
+      margin-top: 50px;
+      heigth: 100px;
+      width: 575px;
+      background-color: $color-light-gray;
+      word-wrap: normal;
+      font-weight: bold;
+
+      b {
+        color: $color-beige;
+      }
     }
   }
 }
