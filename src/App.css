@@ -357,6 +357,13 @@
 .signIn button:focus {
   box-shadow: 0 0 10px black;
 }
+.signIn #signUp {
+  position: absolute;
+  right: 50px;
+}
+.signIn .help-block {
+  color: #c59d5f;
+}
 
 .signUp {
   height: 900px;
@@ -414,9 +421,16 @@
 .signUp button:focus {
   box-shadow: 0 0 10px black;
 }
+.signUp #signIn {
+  position: absolute;
+  right: -65px;
+}
+.signUp .help-block {
+  color: #c59d5f;
+}
 
 .profile {
-  height: 1000px;
+  height: 900px;
   background-color: #f6f6f6;
   padding: 150px 0;
   overflow: hidden;
@@ -469,7 +483,7 @@
 }
 .profile .book {
   background-color: white;
-  height: 600px;
+  height: 500px;
   padding: 70px;
 }
 .profile .book h2 {
@@ -493,10 +507,15 @@
   border-radius: 0px;
   background-color: #f6f6f6;
   padding-left: 10px;
+  width: 50%;
   margin-bottom: 30px;
+  font-size: 20px;
 }
 .profile .book .serv select::selection {
   color: white;
+  background-color: #c59d5f;
+}
+.profile .book .serv select option:hover {
   background-color: #c59d5f;
 }
 .profile .book .dateTime input {
@@ -513,8 +532,10 @@
 .profile .book .dateTime .react-datepicker__day:hover {
   background-color: #c59d5f;
 }
-.profile .book #signUp {
-  margin-top: 70px;
+.profile .book .buttons {
+  margin-top: 50px;
+}
+.profile .book .buttons #signUp {
   color: white;
   font-family: "Oswald";
   font-weight: bold;
@@ -523,17 +544,41 @@
   width: 150px;
   border-radius: 0;
 }
-.profile .book #signUp::selection {
+.profile .book .buttons #signUp::selection {
   color: white;
   background-color: #c59d5f;
 }
-.profile .book #signUp:hover {
+.profile .book .buttons #signUp:hover {
   color: black;
 }
-.profile .book #signUp:active {
+.profile .book .buttons #signUp:active {
   box-shadow: 0 0 10px black;
 }
-.profile .book #signUp:focus {
+.profile .book .buttons #signUp:focus {
+  box-shadow: 0 0 10px black;
+}
+.profile .book .buttons #logout {
+  color: white;
+  font-family: "Oswald";
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #c59d5f;
+  width: 150px;
+  border-radius: 0;
+  position: absolute;
+  right: -15px;
+}
+.profile .book .buttons #logout::selection {
+  color: white;
+  background-color: #c59d5f;
+}
+.profile .book .buttons #logout:hover {
+  color: black;
+}
+.profile .book .buttons #logout:active {
+  box-shadow: 0 0 10px black;
+}
+.profile .book .buttons #logout:focus {
   box-shadow: 0 0 10px black;
 }
 

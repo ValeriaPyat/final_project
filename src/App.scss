@@ -340,8 +340,16 @@ $color-light-grey: #f6f6f6;
     @include button;
     margin: 50px 50px 20px 0;
   }
-}
 
+  #signUp {
+    position: absolute;
+    right: 50px;
+  }
+
+  .help-block {
+    color: $color-beige;
+  }
+}
 
 .signUp {
   height: 900px;
@@ -370,10 +378,18 @@ $color-light-grey: #f6f6f6;
     margin: 50px 50px 20px 0;
   }
 
+  #signIn {
+    position:absolute;
+    right: -65px;
+  }
+
+  .help-block {
+    color: $color-beige;
+  }
 }
 
 .profile {
-  height: 1000px;
+  height: 900px;
   background-color: $color-light-grey;
   padding: 150px 0;
   overflow: hidden;
@@ -408,7 +424,7 @@ $color-light-grey: #f6f6f6;
 
   .book {
     background-color: white;
-    height: 600px;
+    height: 500px;
     padding: 70px;
 
     h2 {
@@ -421,8 +437,16 @@ $color-light-grey: #f6f6f6;
 
       select {
         @include forms;
+        width: 50%;
         margin-bottom: 30px;
         @include selection;
+        font-size: 20px;
+
+        option {
+          &:hover {
+            background-color: $color-beige;
+          }
+        }
       }
     }
     .dateTime {
@@ -443,9 +467,18 @@ $color-light-grey: #f6f6f6;
       }
     }
 
-    #signUp {
-      margin-top: 70px;
-      @include button;
+    .buttons {
+      margin-top: 50px;
+
+      #signUp {
+        @include button;
+      }
+
+      #logout {
+        @include button;
+        position:absolute;
+        right: -15px;
+      }
     }
   }
 }

@@ -39,7 +39,6 @@ const Services = () => {
 
     let servicesElements = services.map (s => <ServicesItem name={s.name} dots={s.dots}
                                                               price={s.price} desc={s.desc}/>);
-
     return (
         <div className={'services'}>
             <div className="services-general">
