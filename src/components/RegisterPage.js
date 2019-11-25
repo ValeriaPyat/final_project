@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {userActions} from "../actions";
-import {Link, NavLink} from 'react-router-dom';
 import {connect} from 'react-redux';
 
 class RegisterPage extends React.Component {
@@ -38,7 +37,10 @@ class RegisterPage extends React.Component {
     this.setState({submitted: true});
     const {user} = this.state;
 
-    this.props.register(user)
+    if (user && user.firstName && user.lastName && user.username
+        && user.password) {
+      this.props.register(user)
+    }
   }
 
   render() {
@@ -84,14 +86,9 @@ class RegisterPage extends React.Component {
               <div className="help-block">Password is required</div>
               }
             </div>
-            <div className={'row col-md-12'}>
-              <div className="form-group">
-                <button className="btn btn-lg">Submit</button>
-                {registering}
-              </div>
-              <NavLink to={'/login'}>
-                <button type="button" className="btn btn-lg" id={'signIn'}>Sign In</button>
-              </NavLink>
+            <div className="form-group">
+              <button className="btn btn-lg">Submit</button>
+              {registering}
             </div>
           </form>
         </div>

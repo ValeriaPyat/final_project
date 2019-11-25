@@ -7,7 +7,6 @@ export const userService = {
 };
 
 function register(user) {
-  console.log(user);
   let username = user.username;
 
   let item = localStorage.getItem(username);
@@ -22,8 +21,6 @@ function register(user) {
 }
 
 function login(username, password) {
-  console.log(username);
-
   let item = localStorage.getItem(username);
   if (item === null) {
     return Promise.reject('User with username: ' + username + " not found");

@@ -7,36 +7,56 @@ import Footer from "./components/Footer";
 import Services from "./components/Services";
 import {Profile} from "./components/Profile";
 import {RegisterPage} from "./components/RegisterPage";
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Redirect, Route, Switch, Router} from "react-router-dom";
 import {connect} from "react-redux";
 import {LoginPage} from "./components/LoginPage";
+import {history} from "./helpers";
+import {alertActions} from "./actions";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    history.listen((location, action) => {
+      this.props.clearAlerts();
+    })
   }
 
   render() {
+    const {alert} = this.props;
+
     return (
-        <BrowserRouter>
+        <Router history={history}>
           <div>
             <Header component={Header}/>
-            <Route path='/' exact render={Home}/>
-            <Route path='/home' render={Home}/>
-            <Route path='/services' render={Services}/>
-            <Route path='/profile' component={Profile}/>
-            <Route path='/registration' component={RegisterPage}/>
-            <Route path='/login' component={LoginPage}/>
+            <Switch>
+              <Route path='/' exact render={Home}/>
+              <Route path='/home' render={Home}/>
+              <Route path='/services' render={Services}/>
+              <Route path='/profile' component={Profile}/>
+              <Route path='/registration' component={RegisterPage}/>
+              <Route path='/login' component={LoginPage}/>
+              <Redirect from="*" to="/"/>
+            </Switch>
+            {
+              alert.message &&
+              <div className={`alert ${alert.type}`}>{alert.message}</div>
+            }
             <Footer/>
           </div>
-        </BrowserRouter>
+        </Router>
     );
   }
 }
 
 function mapState(state) {
-  return {};
+  const {alert} = state;
+  return {alert};
 }
 
-const connectedApp = connect(mapState)(App);
-export { connectedApp as App };
+const actionCreators = {
+  clearAlerts: alertActions.clear
+};
+
+const connectedApp = connect(mapState, actionCreators)(App);
+export {connectedApp as App};

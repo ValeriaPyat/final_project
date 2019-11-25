@@ -301,6 +301,12 @@
   transition: 1s;
 }
 
+.alert {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 100px 30px;
+}
+
 .signIn {
   height: 650px;
   background-color: white;

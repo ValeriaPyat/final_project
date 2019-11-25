@@ -37,20 +37,6 @@ class LoginPage extends React.Component {
         }
     }
 
-
-  componentDidUpdate(prevProps, prevState, snapshot) {
-      if (this.props.user){
-        history.push("/profile");
-      }
-  }
-
-
-  componentDidMount() {
-    if (this.props.user){
-      history.push("/profile");
-    }
-  }
-
   render() {
         const {loggingIn} = this.props;
         const {username, password, submitted} = this.state;
