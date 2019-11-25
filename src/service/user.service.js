@@ -3,8 +3,19 @@ import {userConstants} from "../constants";
 export const userService = {
   register,
   login,
-  logout
+  logout,
+  getLoggedInUser,
+  updateLoggedInUser
 };
+
+function getLoggedInUser() {
+  return JSON.parse(localStorage.getItem(userConstants.LOGGED_IN_USER))
+}
+
+function updateLoggedInUser(user) {
+  localStorage.setItem(userConstants.LOGGED_IN_USER, JSON.stringify(user));
+  localStorage.setItem(user.username, JSON.stringify(user))
+}
 
 function register(user) {
   let username = user.username;

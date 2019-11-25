@@ -40,7 +40,7 @@ class App extends React.Component {
             </Switch>
             {
               alert.message &&
-              <div className={`alert ${alert.type}`}>{alert.message}</div>
+              <div className={`alert ${alert.type} col-md-6 `}>{alert.message}</div>
             }
             <Footer/>
           </div>

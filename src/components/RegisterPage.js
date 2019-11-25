@@ -2,6 +2,7 @@ import React from 'react';
 
 import {userActions} from "../actions";
 import {connect} from 'react-redux';
+import {NavLink} from "react-router-dom";
 
 class RegisterPage extends React.Component {
   constructor(props) {
@@ -86,9 +87,14 @@ class RegisterPage extends React.Component {
               <div className="help-block">Password is required</div>
               }
             </div>
-            <div className="form-group">
-              <button className="btn btn-lg">Submit</button>
-              {registering}
+            <div className="row col-md-6">
+              <div className="form-group">
+                <button className="btn btn-lg">Submit</button>
+                {registering}
+              </div>
+              <NavLink to={'/login'}>
+                <button className="btn btn-lg" id={'signIn'}>sign in</button>
+              </NavLink>
             </div>
           </form>
         </div>

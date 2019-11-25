@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {DateTime} from "./Date";
 import {connect} from "react-redux";
 import {NavLink, Redirect} from "react-router-dom";
-
+import {ServiceList} from "./ServiceList";
 
 class Profile extends React.Component {
     constructor(props) {
@@ -12,7 +12,6 @@ class Profile extends React.Component {
         this.state = {
             user: props.user
         };
-        console.log(this.state.user)
     }
 
     render() {
@@ -20,24 +19,6 @@ class Profile extends React.Component {
         if (!user ){
             return <Redirect to="/login"/>
         }
-        const OptionItem  = (props) => {
-            return <option>{props.name}</option>
-        };
-        let options = [
-            {name: 'Classic haircut'},
-            {name: 'Classic haircut & hair washing'},
-            {name: 'Hair washing'},
-            {name: 'Classic haircut for long hair'},
-            {name: 'Classic shaving'},
-            {name: 'Trimming & arranging long beard'},
-            {name: 'Stylization & arranging beard'},
-            {name: 'Classic haircut and shaving'},
-            {name: 'Haircut & trimming long beard'},
-            {name: 'Beard washing'},
-            {name: 'Beard & hair washing'},
-            {name: 'Child haircut'}
-        ];
-        let optionsElements = options.map (o => <OptionItem name={o.name}/>);
         return (
             <div className={'profile'}>
                 <h1>my account</h1>
@@ -47,26 +28,7 @@ class Profile extends React.Component {
                     {user && <p>Last name: {user.lastName}</p>}
                     {user && <p>Username: {user.username}</p>}
                 </div>
-                <div className="book">
-                    <h2>Appointment</h2>
-                    <div className={'serv'}>
-                        <label htmlFor="service">Please select the service that interests you from the list:</label>
-                        <br/>
-                        <select className="service" id="serv">
-                            {optionsElements}
-                        </select>
-                    </div>
-                    <div className={'dateTime'}>
-                        <label htmlFor="date">Select date and time:</label> <br/>
-                        <DateTime id={"date"}/>
-                    </div>
-                    <div className="row buttons col-md-6">
-                        <button type="button" className="btn btn-lg" id={'signUp'}>Booking</button>
-                        <NavLink to={'/login'}>
-                            <button type="button" className="btn btn-lg" id={'logout'}>Logout</button>
-                        </NavLink>
-                    </div>
-                </div>
+                <ServiceList/>
             </div>
         )
     }

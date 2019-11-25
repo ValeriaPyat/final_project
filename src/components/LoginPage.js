@@ -61,7 +61,7 @@ class LoginPage extends React.Component {
                         }
                     </div>
                     <div className="form-group">
-                        <button className="btn btn-lg">Login</button>
+                        <button className="btn btn-lg">Submit</button>
                         {loggingIn}
                         <NavLink to={'/registration'}>
                             <button type="button" className="btn btn-lg" id={'signUp'}>Sign Up</button>

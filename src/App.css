@@ -302,15 +302,18 @@
 }
 
 .alert {
-  height: 30px;
+  height: 50px;
+  text-align: center;
   line-height: 30px;
-  padding: 0 100px 30px;
+  width: 560px;
+  margin: -50px 0 30px 100px;
+  border-radius: 0px;
 }
 
 .signIn {
-  height: 650px;
+  height: auto;
   background-color: white;
-  padding: 150px 100px;
+  padding: 150px 100px 50px 100px;
 }
 .signIn h2 {
   font-family: "Oswald";
@@ -372,9 +375,9 @@
 }
 
 .signUp {
-  height: 900px;
+  height: auto;
   background-color: white;
-  padding: 150px 100px;
+  padding: 150px 100px 50px 100px;
 }
 .signUp h2 {
   font-family: "Oswald";
@@ -412,7 +415,7 @@
   background-color: #c59d5f;
   width: 150px;
   border-radius: 0;
-  margin: 50px 50px 20px 0;
+  margin: 50px 0px 20px 0;
 }
 .signUp button::selection {
   color: white;
@@ -429,16 +432,16 @@
 }
 .signUp #signIn {
   position: absolute;
-  right: -65px;
+  right: -295px;
 }
 .signUp .help-block {
   color: #c59d5f;
 }
 
 .profile {
-  height: 900px;
+  height: auto;
   background-color: #f6f6f6;
-  padding: 150px 0;
+  padding-top: 150px;
   overflow: hidden;
 }
 .profile::selection {
@@ -487,44 +490,44 @@
   color: white;
   background-color: #c59d5f;
 }
-.profile .book {
+
+.book {
   background-color: white;
-  height: 500px;
-  padding: 70px;
+  height: auto;
+  padding: 70px 0 50px 80px;
 }
-.profile .book h2 {
+.book h2 {
   color: white;
   font-family: "Oswald";
   font-weight: bold;
   text-transform: uppercase;
   color: black;
 }
-.profile .book h2::selection {
+.book h2::selection {
   color: white;
   background-color: #c59d5f;
 }
-.profile .book .serv {
+.book .serv {
   margin: 30px 0 0 0;
+  font-family: Arial;
 }
-.profile .book .serv select {
+.book .serv #serv {
   border: none;
   height: 45px;
   width: 100%;
   border-radius: 0px;
   background-color: #f6f6f6;
   padding-left: 10px;
-  width: 50%;
+  width: 40%;
   margin-bottom: 30px;
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: bold;
 }
-.profile .book .serv select::selection {
+.book .serv #serv::selection {
   color: white;
   background-color: #c59d5f;
 }
-.profile .book .serv select option:hover {
-  background-color: #c59d5f;
-}
-.profile .book .dateTime input {
+.book .dateTime input {
   border: none;
   height: 45px;
   width: 100%;
@@ -532,16 +535,16 @@
   background-color: #f6f6f6;
   padding-left: 10px;
 }
-.profile .book .dateTime .react-datepicker__day--selected {
+.book .dateTime .react-datepicker__day--selected {
   background-color: #c59d5f;
 }
-.profile .book .dateTime .react-datepicker__day:hover {
+.book .dateTime .react-datepicker__day:hover {
   background-color: #c59d5f;
 }
-.profile .book .buttons {
+.book .buttons {
   margin-top: 50px;
 }
-.profile .book .buttons #signUp {
+.book .buttons #signUp {
   color: white;
   font-family: "Oswald";
   font-weight: bold;
@@ -550,20 +553,20 @@
   width: 150px;
   border-radius: 0;
 }
-.profile .book .buttons #signUp::selection {
+.book .buttons #signUp::selection {
   color: white;
   background-color: #c59d5f;
 }
-.profile .book .buttons #signUp:hover {
+.book .buttons #signUp:hover {
   color: black;
 }
-.profile .book .buttons #signUp:active {
+.book .buttons #signUp:active {
   box-shadow: 0 0 10px black;
 }
-.profile .book .buttons #signUp:focus {
+.book .buttons #signUp:focus {
   box-shadow: 0 0 10px black;
 }
-.profile .book .buttons #logout {
+.book .buttons #logout {
   color: white;
   font-family: "Oswald";
   font-weight: bold;
@@ -572,19 +575,19 @@
   width: 150px;
   border-radius: 0;
   position: absolute;
-  right: -15px;
+  left: 530px;
 }
-.profile .book .buttons #logout::selection {
+.book .buttons #logout::selection {
   color: white;
   background-color: #c59d5f;
 }
-.profile .book .buttons #logout:hover {
+.book .buttons #logout:hover {
   color: black;
 }
-.profile .book .buttons #logout:active {
+.book .buttons #logout:active {
   box-shadow: 0 0 10px black;
 }
-.profile .book .buttons #logout:focus {
+.book .buttons #logout:focus {
   box-shadow: 0 0 10px black;
 }
 
